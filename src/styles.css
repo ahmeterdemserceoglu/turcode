@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        @apply bg-background-dark;
+    }
+
+    html,
+    body {
+        @apply h-full m-0 p-0 overflow-hidden;
+    }
+
+    body {
+        @apply font-sans text-white;
+    }
+
+    #root {
+        @apply h-full;
+    }
+
+    /* Customize scrollbars */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-background-paper-dark;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-700 rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-600;
+    }
+}
+
+/* Custom utility classes */
+@layer utilities {
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .truncate-text {
+        @apply overflow-hidden text-ellipsis whitespace-nowrap;
+    }
+}
+
+/* Monaco editor customizations */
+.monaco-editor .editor-widget {
+    @apply !z-50;
+}
